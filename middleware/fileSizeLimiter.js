@@ -17,11 +17,7 @@ const filesSizeLimiter = (req, res, next) => {
   if (filesOverLimi.length) {
     const properVerb = filesOverLimi.length > 1 ? "are" : "is";
 
-    const sentence =
-      `Upload Failed. ${filesOverLimi.toString()} ${properVerb} over the file size limit of ${MB} MB.`.replaceALL(
-        ",",
-        ", "
-      );
+    const sentence = `Upload Failed. ${filesOverLimi.toString()} ${properVerb} over the file size limit of ${MB} MB.`;
 
     const message =
       filesOverLimi.length < 3
