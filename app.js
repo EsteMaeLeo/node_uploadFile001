@@ -23,7 +23,7 @@ app.post(
   "/upload",
   fileUpload({ createParentPath: true }),
   filesPayloadExists,
-  fileExtLimeter([".png", "jpg", "jpeg"]),
+  fileExtLimeter([".png", ".jpg", ".jpeg"]),
   filesSizeLimiter,
   (req, res) => {
     const files = req.files;

@@ -5,6 +5,7 @@ const filesSizeLimiter = (req, res, next) => {
   const files = req.files;
 
   const filesOverLimi = [];
+  console.log(FILE_SIZE_LIMIT);
 
   //Which files over the limit
   Object.keys(files).forEach(key => {
